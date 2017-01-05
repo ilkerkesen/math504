@@ -7,9 +7,9 @@ D = D(1:k,1:k);
 [Q,R] = qr(V,0);
 T = R*D/R;
 I = eye(size(T));
-for i = 1:numel(X)
-    z = X(i)+Y(i)*i;
-    Z(i) = get_sign(T-z*I);
+for k = 1:numel(X)
+    z = X(k)+Y(k)*i;
+    Z(k) = min(svd((T-z*I)));
 end
 end
 

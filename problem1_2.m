@@ -2,9 +2,8 @@ function [X,Y,Z] = problem1_2(A,xi,xf,yi,yf,h)
 [X,Y] = meshgrid(xi:h:xf,yi:h:yf);
 I = eye(size(A));
 Z = zeros(size(X));
-for i = 1:numel(X)
-    z = X(i)+Y(i)*i;
-    Z(i) = get_sign(A-z*I);
+for k = 1:numel(X)
+    z = X(k)+Y(k)*i;
+    Z(k) = min(svd(A-z*I));
 end
 end
-
