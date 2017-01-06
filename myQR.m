@@ -1,5 +1,4 @@
 function [eigvals] = myQR(A)
-% A = hess(A);
 [m,n] = size(A);
 if m == 1
     eigvals = A(1);
