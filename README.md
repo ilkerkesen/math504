@@ -1,2 +1,2 @@
-# math504
-Repository for Koc University Math 504 Course
+# numerical-methods
+Repository for Numerical Methods Course at Koç University
